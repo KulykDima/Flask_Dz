@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Search result
+{% endblock %}
+
+{% block content %}
+    <h1>Search result</h1>
+    <h2>Стоимость 1 BTC</h2>
+    {% for i in response %}
+            <td>{{ i.code }}</td><br>
+            <td>{{ i.name }}</td><br>
+            <td>{{ i.rate }}</td><br>
+    {% endfor %}
+{% endblock %}

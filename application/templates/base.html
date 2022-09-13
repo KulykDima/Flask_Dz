@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Library - Home - {% block title %}Base page{% endblock %}</title>
+</head>
+<body>
+    <div>
+        <strong>Flask Library</strong>
+        <!--CRUID
+            Create
+            Read
+            Update
+            Delete-->
+        <a href="/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{ url_for('list_books') }}">Books list</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{ url_for('create_book') }}">Add book</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+        <form method="get" action="{{ url_for('search_book') }}">
+            <input placeholder="Search" name="val">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
