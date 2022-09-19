@@ -87,7 +87,7 @@ def search_book(val):
     return render_template('books/search_res.html', books=books)
 
 
-# ДЗ_12 (Bitcoin rate)
+# ДЗ_12_(Bitcoin rate)
 @app.route('/rates')
 @use_kwargs(
     {
